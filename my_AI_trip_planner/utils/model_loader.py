@@ -8,16 +8,6 @@ from langchain_groq import ChatGroq
 from lagchain_openai import ChatOpenAI
 
 load_dotenv()
-
-class ConfigLoader:
-    def __init__(self):
-        print("Loading configuration...")
-        self.config = self.load_config()
-    def __getitem__(self,key):
-        return self.config[key]
-  
-
-
 class ModelLoader(BaseModel):
     def __init__(self):
         pass
