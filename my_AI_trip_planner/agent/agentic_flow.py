@@ -14,9 +14,9 @@ class GraphBuilder():
 
     def agent_function(self,state:MessageState):
         """This is the main agent function"""
-        user_query  = state["message"]
-        input_query = [self.system_prompt]+user_query
-        response =  self.llm_with_tools.invoke(input_query)
+        user_question  = state["messages"]
+        input_question = [self.system_prompt]+user_question
+        response =  self.llm_with_tools.invoke(input_question)
         return {"message":response}
 
     def build_graph(self):
